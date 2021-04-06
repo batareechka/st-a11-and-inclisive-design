@@ -1,210 +1,1241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <title>Shower Presentation Engine</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
-    <style>
-        .shower {
-            --slide-ratio: calc(16 / 9);
-        }
-    </style>
+  <title>Inclusive Design at Studytube</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="node_modules/@shower/material/styles/styles.css">
+  <link rel="stylesheet" href="styles/custom.css">
+  <style>
+    .shower {
+      --slide-ratio: calc(16 / 9);
+      --color-key: #372ccd;
+      --color-black: #0B0B2B;
+      /*
+                --color-dark: #757575;
+                --color-medium: #9e9e9e;
+                --color-light: #bdbdbd;
+                --color-back: #eeeeee;
+                --color-yellow: #fff59d;
+      */
+
+      --diagonal: linear-gradient(
+        135deg, var(--color-key) 50%,
+        rgba(0, 0, 0, 0.1) 50%
+      );
+    }
+  </style>
 </head>
 <body class="shower list">
 
-    <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
-    </header>
+<header class="caption">
+  <h1>a11y и инклюзивный дизайн</h1>
+  <p>С чего начать?</p>
+</header>
 
-    <section class="slide" id="cover">
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="https://pepelsbey.net">Vadim Makeev</a></p>
-        <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-            <figcaption class="copyright right white">
-                <a href="https://fiftyfootshadows.net">© John Carey</a>
-            </figcaption>
-        </figure>
-        <style>
-            #cover h2 {
-                margin: 30px 0 0;
-                color: white;
-                text-align: center;
-                font-size: 70px;
-            }
+<section class="slide">
+  <h2>a11y и инклюзивный дизайн</h2>
+  <p>c чего начать?</p>
+  <figure>
+    <img class="cover" src="pictures/inclusive.jpeg" alt="Picture placeholder.">
+  </figure>
+</section>
 
-            #cover p {
-                margin: 10px 0 0;
-                text-align: center;
-                color: white;
-                font-style: italic;
-                font-size: 20px;
-            }
+<section class="slide" >
+  <strong class="shout">Пишем код во&nbsp;имя перемен</strong>
+</section>
 
-            #cover p a {
-                color: white;
-            }
-        </style>
-    </section>
+<section class="slide">
+  <h2>План</h2>
+  <ol>
+    <li>Введение</li>
+    <li class="next">Мотивация</li>
+    <li class="next">Правовое регулирование доступности</li>
+    <li class="next">Понятие Disability</li>
+    <li class="next">Какие ограничения бывают и в чём потребности</li>
+    <li class="next">Техники обеспечения доступности</li>
+    <li class="next">Инструменты и ресурсы</li>
+    <li class="next">Вопросы</li>
+  </ol>
+</section>
 
-    <section class="slide">
-        <h2>Shower key features</h2>
-        <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-    </section>
+<section class="slide">
+  <h2 class="shout" style="font-size: 96px">Ответ на главный вопрос жизни, вселенной и всего такого</h2>
+</section>
 
-    <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-    </section>
+<section class="slide">
+  <h2>a11y - нумероним</h2>
+  <figure>
+    <img src="pictures/a11y-numeronim.png" alt="" class="cover">
+    <figcaption class="copyright"><a href="http://mds.is/a11y/">mds.is</a>.</figcaption>
+  </figure>
+</section>
 
-    <section class="slide">
-        <h2>Two columns if you like</h2>
-        <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-        </div>
-    </section>
+<section class="slide">
+  <h2>Что такое доступность</h2>
+  <blockquote>
+    Accessibility is the practice of making your websites usable by
+    <mark>as many people as possible</mark>
+    . We traditionally think of this as being about people with disabilities, but the practice of making sites accessible also benefits other groups such as those using mobile devices, or those with slow network connections.
+  </blockquote>
+  <cite><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">developer.mozilla.org</a></cite>
+</section>
 
-    <section class="slide">
-        <h2>All kind of lists</h2>
-        <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
-                <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
-                </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
-        </ol>
-    </section>
+<section class="slide">
+  <h2 class="cover">Web Content Accessibility Guidelines (WCAG) 2.1</h2>
+</section>
 
-    <section class="slide">
-        <h2>Serious citations</h2>
-        <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
-        </figure>
-    </section>
+<section class="slide">
+  <img class="cover" src="pictures/wcag-2.1.png" alt="">
+  <small class="copyright"><a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG) 2.1</a></small>
+</section>
 
-    <section class="slide">
-        <h2>Code samples</h2>
-        <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
-        </pre>
-    </section>
+<section class="slide principles">
+  <h2 class="principles__header">Главные принципы доступности</h2>
+  <div class="columns two">
+    <div class="principles__item next">
+      <div class="principles__item-header">
+        <img class="principles__img" src="pictures/perceivable.svg" alt="">
+        <h3 class="principles__title">Воспринимаемость</h3>
+      </div>
+      <p>Люди должны иметь возможность воспринимать контент тем способом, который им доступен.</p>
+    </div>
 
-    <section class="slide">
-        <h2>Even tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
-        </table>
-        <p>It’s good to have information organized.</p>
-    </section>
+    <div class="principles__item next">
+      <div class="principles__item-header">
+        <img class="principles__img" src="pictures/operable.svg" alt="">
+        <h3 class="principles__title">Управляемость</h3>
+      </div>
+      <p>Люди должны иметь возможность взаимодействовать с интерфейсом и управлять контентом тем способом, который им доступен.</p>
+    </div>
 
-    <section class="slide" id="picture">
-        <h2>Pictures</h2>
-        <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="https://fiftyfootshadows.net">© John Carey</a>
-            </figcaption>
-        </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
-    </section>
+    <div class="principles__item next">
+      <div class="principles__item-header">
+        <img class="principles__img" src="pictures/understandable.svg" alt="">
+        <h3 class="principles__title">Понятность</h3>
+      </div>
+      <p>Контент и интерфейс должны быть понятны всем людям, в том числе и с инвалидностью.</p>
 
-    <section class="slide">
-        <h2 class="shout shrink">You can even shout this way</h2>
-    </section>
+    </div>
 
-    <section class="slide">
-        <h2>Inner navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
-    </section>
+    <div class="principles__item next">
+      <div class="principles__item-header">
+        <img class="principles__img" src="pictures/robust.svg" alt="">
+        <h3 class="principles__title">Надёжность</h3>
+      </div>
+      <p>Интерфейс должен оставаться доступным при изменении версий продукта или операционной системы.</p>
+    </div>
+  </div>
+  <small class="copyright"><a href="https://www.sberbank.ru/common/img/uploaded/redirected/person/digital_guideline2/assets/index.html">Гайдлайн Сбербанка</a></small>
+</section>
 
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
-        </h2>
-        <style>
-            #see-more h2 {
-                font-size: 100px
-            }
+<section class="slide">
+  <h2>Уровни соответствия</h2>
+  <img src="pictures/wcag-a-aa-aaa.jpeg" alt="" class="img-center">
+  <small class="copyright"><a href="https://www.levelaccess.com/wcag-a-and-wcag-aa-conformance/">The Difference Between WCAG A and WCAG AA Conformance - Level Access</a></small>
+</section>
 
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
-            }
-        </style>
-    </section>
+<section class="slide">
+  <h3>Уровень A - базовый</h3>
+  <p>✅ Выполнены критерии Level A (30шт.)</p>
+  <p>Без выполнения критериев существуют барьеры, которые ассистивные технологии не могут преодолеть. Влияет на самую широкую часть аудитории и является существенно важным.</p>
+</section>
 
-    <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
-    </footer>
+<section class="slide">
+  <h3>Уровень AA - высокий</h3>
+  <p>✅ Выполнены все критерии Level A (30шт.) + Level AA (20шт.)<br><b>Всего: 50шт.</b></p>
+  <p>Уровень, требуемый законом. При выполнении всех критериев всё ещё могут оставаться некоторые барьеры, но большинству ассистивных технологий контент будет доступен.</p>
+</section>
 
-    <div class="progress"></div>
+<section class="slide">
+  <h3>Уровень AAA - максимальный</h3>
+  <p>✅ Выполнены все критерии <br>Level A (30шт.) + Level AA (20шт.) + Level AAA (28шт.)<br><b>Всего: 78шт.</b></p>
+  <p>Для некоторого контента невозможно достичь
+    <i>всех</i> критериев.<br>Не является обязательным. Нужен для сайтов, ориентированных на аудиторию с постоянно ограниченными возможностями.
+  </p>
+</section>
 
-    <script src="node_modules/@shower/core/dist/shower.js"></script>
-    <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+<section class="slide">
+  <h2 class="cover" style="width: 80%">Accessible Rich Internet Applications<br>(WAI-ARIA)&nbsp;1.1</h2>
+</section>
+
+<section class="slide">
+  <img src="pictures/wai-aria.png" alt="" class="cover">
+  <small class="copyright"><a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA) 1.1</a></small>
+</section>
+
+<section class="slide">
+  <figure>
+    <img src="pictures/rdf_model.png" alt="" class="cover">
+    <figcaption class="copyright">
+      <a href="https://www.w3.org/TR/wai-aria/#roles_categorization">Categorization of Roles</a></figcaption>
+  </figure>
+</section>
+
+
+<section class="slide">
+  <div class="columns three" lang="en" style="font-size: 85%;">
+    <ul>
+      <li><code>aria-autocomplete</code></li>
+      <li><code>aria-checked</code></li>
+      <li><code>aria-current</code></li>
+      <li><code>aria-disabled</code></li>
+      <li><code>aria-expanded</code></li>
+      <li><code>aria-haspopup</code></li>
+      <li><code>aria-hidden</code></li>
+      <li><code>aria-invalid</code></li>
+    </ul>
+    <ul>
+      <li><code>aria-label</code></li>
+      <li><code>aria-level</code></li>
+      <li><code>aria-multiline</code></li>
+      <li><code>aria-multiselectable</code></li>
+      <li><code>aria-orientation</code></li>
+      <li><code>aria-pressed</code></li>
+      <li><code>aria-readonly</code></li>
+    </ul>
+    <ul>
+      <li><code>aria-required</code></li>
+      <li><code>aria-selected</code></li>
+      <li><code>aria-sort</code></li>
+      <li><code>aria-valuemax</code></li>
+      <li><code>aria-valuemin</code></li>
+      <li><code>aria-valuenow</code></li>
+      <li><code>aria-valuetext</code></li>
+      <li>...</li>
+    </ul>
+  </div>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Мотивация</h2>
+</section>
+<section class="slide clear">
+  <h2>Мотивация для компании</h2>
+  <ul>
+    <li value="🍪">Идея</li>
+    <li class="next" value="🍪">Инфоповод</li>
+    <li class="next" value="🍪">Повышение уровня социального развития (качества жизни)</li>
+    <li class="next" value="🍪">Прирост аудитории</li>
+    <li class="next" value="🪓">Закон</li>
+  </ul>
+</section>
+
+<section class="slide clear">
+  <h2>Мотивация для разработчика</h2>
+  <ul>
+    <li value="💡">...</li>
+    <li class="next" value="🤓">...</li>
+    <li class="next" value="💼">...</li>
+    <li class="next" value="💰">...</li>
+    <li class="next" value="✅">...</li>
+    <li class="next" value="❌">...</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Правовое регулирование доступности</h2>
+</section>
+
+<section class="slide">
+  <h2><a href="https://en.wikipedia.org/wiki/Web_Accessibility_Directive"
+         target="_blank"
+         title="Директива о веб-доступности">Web Accessibility Directive || Directive (EU) 2016/2102</a></h2>
+  <ul>
+    <li>для всего государственного сектора</li>
+    <li class="next">по таймлайну для веба, все сайты должны быть доступны с лета 2020.</li>
+    <li class="next">судебной практики пока нет, но предусмотрены штрафы</li>
+    <li class="next"> 💡 если коммерческая компания сотрудничает с государственной, то она тоже попадает под действие директивы</li>
+  </ul>
+</section>
+
+
+<section class="slide">
+  <h2><a href="https://en.wikipedia.org/wiki/European_Accessibility_Act"
+         target="_blank"
+         title="Европейский закон о доступности">European Accessibility Act</a></h2>
+  <ul>
+    <li>обсуждается и дорабатывается</li>
+    <li class="next">для государственных и частных компаний</li>
+    <li class="next">обсуждение закончится в 2022 году, к 2025 году компании должны адаптировать свои ресурсы</li>
+    <li class="next">штрафы на основе текста закона</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2><a href="https://en.wikipedia.org/wiki/European_Accessibility_Act"
+         target="_blank"
+         title="">Европейский стандарт EN 301 549</a></h2>
+  <ul>
+    <li>на него ссылается директива (EU) 2016/2102</li>
+    <li class="next">основан на требованиях <a href="https://www.w3.org/TR/WCAG21/"
+                                               target="_blank">WCAG 2.1</a>(2.0) на уровне критерия соответствия AA
+    </li>
+    <li class="next">даёт только рекомендации, становится обязательным, когда на него ссылается документ с юридической силой</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2 class="cover"><a href="https://medium.com/web-standards/a11y-and-law-a81dd9dd5fc8"
+                       target="_blank">Доступность и закон</a></h2>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Понятие Disability</h2>
+</section>
+
+<section class="slide">
+  <h2 class="cover" style="width: 60%;">Идеальный пользователь <br> Норма <br> Статистика</h2>
+</section>
+
+<section class="slide">
+  <ul>
+    <li><b>7,8 миллиардов</b> людей.</li>
+    <li class="next"><a href="https://www.who.int/news-room/fact-sheets/detail/disability-and-health"
+                        target="_blank">Мировая статистика</a> говорит, что в мире живёт более
+      <b>1 миллиарда людей с инвалидностью</b>. Примерно <b>15%</b> от всего населения планеты.
+    </li>
+    <li class="next">Не стоит решать за других людей, каким сервисом и как именно пользоваться – нужно предоставить им возможность.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <img class="cover"
+       src="pictures/disability-1980-and-today.png"
+       alt="1980 - Сегодня - несоответствие между человеком и средой"
+       title="1980 - что-то не так с человеком и отклонение от 'нормального'. Сегодня - несоответствие между человеком и средой.">
+  <small class="copyright"><a href="https://download.microsoft.com/download/b/0/d/b0d4bf87-09ce-4417-8f28-d60703d672ed/inclusive_toolkit_manual_final.pdf">Inclusive toolkit manual from Microsoft</a>.</small>
+</section>
+
+<section class="slide">
+  <img class="cover" src="pictures/disability.png" alt="">
+  <small class="copyright"><a href="https://download.microsoft.com/download/b/0/d/b0d4bf87-09ce-4417-8f28-d60703d672ed/inclusive_toolkit_manual_final.pdf">Inclusive toolkit manual from Microsoft</a>.</small>
+</section>
+
+<section class="slide">
+  <h2>Inclusive Design</h2>
+  <blockquote>
+    Inclusive Design doesn’t mean you’re designing one thing for all people. You’re designing a diversity of ways to participate so everyone has a sense of belonging
+  </blockquote>
+  <p><i>— Susan Goltsman, Inclusive Design leader</i></p>
+  <small class="copyright"><a href="https://medium.com/@Valeria.kurmak/%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0-%D1%83%D1%87%D0%B8%D1%82%D1%8B%D0%B2%D0%B0%D1%8E%D1%82-%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D1%82%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE-%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D0%B5%D0%B3%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F-4cac285a52e2#">Когда учитывают потребности только среднего пользователя</a>.</small>
+</section>
+
+<section class="slide">
+  <img src="pictures/625404-iisc_equalityequity_300ppi.jpeg" alt="" class="img-center">
+</section>
+
+<section class="slide">
+  <img src="pictures/Equity-vs-Equality-twitter.jpeg" alt="" class="img-center">
+</section>
+
+<section class="slide">
+  <h2 class="shout">Какие бывают ограничения</h2>
+</section>
+
+<section class="slide">
+  <h2 class="cover">The Persona Spectrum</h2>
+</section>
+
+<section class="slide">
+  <img class="cover" src="pictures/the-persona-spectrum.png" alt="">
+</section>
+
+<section class="slide">
+  <p style="font-weight: 700; font-size: 64px;">Solve for one,<br>extend to many</p>
+  <img src="pictures/persona-spectrum-example.png"
+       alt=""
+       style="position: absolute; right: 112px; top: 48px; height: 460px">
+</section>
+
+<section class="slide">
+  <p class="cover" style="width: 80%; font-size: 120%; text-align: center;">
+    <b>11.5%</b> жизни проводим в состоянии ограничений.</p>
+</section>
+
+<section class="slide">
+  <h2 class="cover">Нарушения зрения</h2>
+</section>
+
+<section class="slide">
+  <h3>Незрячие люди</h3>
+  <div class="columns two">
+    <div>
+      <ul>
+        <li>Скринридер</li>
+      </ul>
+      <img src="pictures/anatolii-popko.jpeg" alt="">
+    </div>
+    <div>
+      <ul>
+        <li>Брайлевский дисплей</li>
+      </ul>
+      <img src="pictures/braille-display.jpeg" alt="">
+    </div>
+  </div>
+  <p style="font-size: 70%;">(VoiceOver, NWDA, JAWS, TalkBack)</p>
+</section>
+
+<section class="slide">
+  <h4>Какие сложности при взаимодействии:</h4>
+  <ul class="">
+    <li>компоненты некорректно свёрстаны</li>
+    <li class="next">изображения плохо/не описаны</li>
+    <li class="next">у страниц нет чёткой структуры</li>
+    <li class="next">в "поле видимости" попадают ненужные элементы (таблицы в email, фокус модалки)</li>
+    <li class="next">нет уведомления об изменении контента</li>
+    <li class="next">нет альтернативы (капча, видео, карта)</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Люди с остаточным зрением</h3>
+  <div class="columns two">
+    <div>
+      <ul>
+        <li>Масштабируемость</li>
+        <li>Скринзум</li>
+        <li>Контраст</li>
+        <li>Озвучка текста</li>
+        <li>Иногда скринридер</li>
+      </ul>
+    </div>
+    <div>
+      <img src="pictures/visual-impairment.png" alt="" class="full-width">
+      <img src="pictures/leber-2-1.jpeg" alt="" class="full-width">
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <h4>Какие сложности при взаимодействии:</h4>
+  <ul class="">
+    <li>страница не масштабируется корректно</li>
+    <li class="next">выпадающие меню + ховер</li>
+    <li class="next">маленький контраст текста (серый на белом, много белого, нет акцентов)</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h3>Люди с нарушением цветовосприятия</h3>
+  <div class="columns two">
+    <div>
+      <ul>
+        <li>8% мужчин</li>
+        <li>0.5% женщин</li>
+      </ul>
+      <div class="next" style="font-size: 80%;">
+        <h4 style="margin-bottom: 1em;">Какие сложности при взаимодействии:</h4>
+        <ul>
+          <li>Информация закодирована
+            <mark>только</mark>
+            цветом
+          </li>
+        </ul>
+      </div>
+    </div>
+    <img src="pictures/metro.png" alt="">
+  </div>
+</section>
+
+<section class="slide">
+  <div class="columns three">
+    <div>
+      <div class="vision-item">
+        <span class="vision-title">Normal</span>
+        <img src="pictures/pigment.jpeg" alt="">
+      </div>
+
+      <div class="vision-item">
+        <span class="vision-title">Tritanopia</span>
+        <img src="pictures/pigment_t.jpeg" alt="">
+      </div>
+    </div>
+    <div>
+      <div class="vision-item">
+        <span class="vision-title">Protanopia</span>
+        <img src="pictures/pigment_p.jpeg" alt="">
+      </div>
+
+      <div class="vision-item">
+        <span class="vision-title">Achromatopsia</span>
+        <img src="pictures/pigment_g.jpeg" alt="">
+      </div>
+    </div>
+    <div>
+      <div class="vision-item">
+        <span class="vision-title">Deuteranopia</span>
+        <img src="pictures/pigment_d.jpeg" alt="">
+      </div>
+
+      <div class="vision-item">
+        <span class="vision-title">Loss of contrast</span>
+        <img src="pictures/pigment-loss-of-contrast.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <h4>Ещё больше ситуативных примеров:</h4>
+  <ul>
+    <li>плохое зрение</li>
+    <li>экран на солнце</li>
+    <li>презентация на проекторе в светлом помещении</li>
+    <li>Night Shift Mode</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2 class="cover" style="width: 60%;">Нарушения<br>опорно-двигательного<br>аппарата</h2>
+</section>
+
+<section class="slide">
+  <h4>Какие сложности при взаимодействии:</h4>
+  <ul style="font-size: 80%;">
+    <li>Отсутствие состояния фокуса на элементах: непонятно, где находишься</li>
+    <li class="next">Сложно заполнять поля (нужны подсказки и автокомплит - сокращают время взаимодействия)</li>
+    <li class="next">Большое количество кликабельных элементов: много "табать"</li>
+    <li class="next">Недоступные модальные окна</li>
+    <li class="next">Маленькие кликабельные области</li>
+    <li class="next">Сценарии, в которых доступен только звонок</li>
+    <li class="next">Фото в определённой позе</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h4>Ещё больше ситуативных примеров:</h4>
+  <ul>
+    <li>перелом руки</li>
+    <li>ребёнок на руках</li>
+    <li>сломалась мышка</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2 class="cover">Нарушения слуха</h2>
+</section>
+
+<section class="slide">
+  <h4>Какие сложности при взаимодействии:</h4>
+  <div class="columns two">
+    <ul>
+      <li>Нет альтернативы аудио</li>
+      <li class="next">Субтитры "Играет музыка" вместо текста</li>
+      <li class="next">Непонятно, кто говорит</li>
+    </ul>
+    <img src="pictures/Example_of_subtitles_(Charade,_1963).jpeg" alt="">
+  </div>
+</section>
+
+<section class="slide">
+  <h4>Ещё больше ситуативных примеров:</h4>
+  <ul>
+    <li>находитесь в шумном месте</li>
+    <li>сильный акцент у говорящего</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2 class="cover" style="width: 100%; text-align: center;">Ментальные нарушения</h2>
+</section>
+
+<section class="slide">
+  <h3>Важно</h3>
+  <ul>
+    <li>Понятные, читабельные тексты</li>
+    <li class="next">Спокойная обстановка</li>
+    <li class="next">Время, которое можно потратить на взаимодействие с интерфейсом</li>
+    <li class="next">Инструкции</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h4>Какие сложности при взаимодействии:</h4>
+  <i hidden>Скриншоты очень сложных форм и много текста</i>
+  <ul style="font-size: 80%;">
+    <li>Сильно отвлекают баннеры и видео</li>
+    <li class="next">Карусель <a href="https://shouldiuseacarousel.com/" target="_blank">shouldiuseacarousel.com</a>
+    </li>
+    <li class="next">Много текста и интерактивных элементов</li>
+    <li class="next">Нет альтернативы коммуникации через почту или чат</li>
+    <li class="next">Если человека отвлечь, сложно вспомнить, на каком месте остановился</li>
+    <li class="next">Должна быть возможность сворачивать и разворачивать элементы, которые могут потенциально отвлекать</li>
+    <li class="next">Сложно читать большие объёмы текста</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h4>Ещё больше ситуативных примеров:</h4>
+  <ul>
+    <li>сильная усталость</li>
+    <li>специальная литература с терминами</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Техники обеспечения доступности</h2>
+</section>
+
+<section class="slide">
+  <h2>Техники обеспечения доступности</h2>
+
+  <ul>
+    <li>Базовые <i>(меньше времени, больше охват)</i></li>
+    <li>Продвинутые <i>(больше времени, специализированная аудитория)</i></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <p class="cover">Хорошая новость в том, что для доступного интерфейса не нужно ничего специального: он делается корректной версткой.</p>
+</section>
+
+<section class="slide">
+  <h2 class="cover">Язык документа</h2>
+</section>
+
+<section class="slide">
+  <h2>Язык документа</h2>
+  <p class="conformance-level understandable" title="Понятность">(Level A)</p>
+  <pre>
+    <code>&lt;html <mark>lang="en"</mark>&gt;</code>
+    <code>&lt;head&gt;</code>
+    <code>  &lt;title&gt;My page&lt;/title&gt;</code>
+    <code>  &lt;meta charset="UTF-8"&gt;</code>
+    <code>  &lt;link rel="stylesheet" href="styles.css"&gt;</code>
+    <code>&lt;/head&gt;</code>
+  </pre>
+  <small class="copyright"><a href="https://www.w3.org/TR/WCAG21/#language-of-page">Success Criterion 3.1.1 Language of Page</a></small>
+</section>
+
+<section class="slide">
+  <h2>Язык документа</h2>
+  <p class="conformance-level understandable" title="Понятность">(Level A)</p>
+  <pre>
+    <code>&lt;html <mark>lang="ru"</mark>&gt;</code>
+    <code>&lt;head&gt;</code>
+    <code>  &lt;title&gt;Моя страница&lt;/title&gt;</code>
+    <code>  &lt;meta charset="UTF-8"&gt;</code>
+    <code>  &lt;link rel="stylesheet" href="styles.css"&gt;</code>
+    <code>&lt;/head&gt;</code>
+  </pre>
+  <small class="copyright"><a href="https://www.w3.org/TR/WCAG21/#language-of-page">Success Criterion 3.1.1 Language of Page</a></small>
+</section>
+
+<section class="slide">
+  <h2>Язык отдельных частей</h2>
+  <p class="conformance-level understandable" title="Понятность">(Level AA)</p>
+  <pre>
+    <code>&lt;html lang="ru"&gt;</code>
+    <code>...</code>
+    <code>&lt;body&gt;</code>
+    <code>  &lt;p&gt;В воздухе витало &lt;i <mark>lang="fr"</mark>&gt;je ne sais quoi&lt;/i&gt;.&lt;/p&gt;</code>
+    <code>&lt;/body&gt;</code>
+    <code>&lt;/html&gt;</code>
+  </pre>
+  <small class="copyright"><a href="https://www.w3.org/TR/WCAG21/#language-of-parts">Success Criterion 3.1.2 Language of Parts</a></small>
+</section>
+
+<section class="slide">
+  <h2 class="cover">Семантика</h2>
+</section>
+
+<section class="slide">
+  <img class="cover" src="pictures/semantics.png" alt="">
+</section>
+
+<section class="slide">
+  <h2>Ориентиры (Landmarks)</h2>
+  <p class="conformance-level operable" title="Управляемость">(Level A)</p>
+  <pre style="font-size: 65%;">
+    <code><mark>&lt;header&gt;</mark>Логотип&lt;/header&gt;</code>
+    <code><mark>&lt;nav&gt;</mark>Главная навигация&lt;/nav&gt;</code>
+    <code><mark>&lt;main&gt;</mark></code>
+    <code>  &lt;h1&gt;Заголовок&lt;/h1&gt;</code>
+    <code>  <mark>&lt;section&gt;</mark></code>
+    <code>    &lt;h2&gt;Заголовок секции&lt;/h2&gt;</code>
+    <code>  &lt;/section&gt;</code>
+    <code>  <mark>&lt;section&gt;</mark></code>
+    <code>    &lt;h2&gt;Заголовок секции&lt;/h2&gt;</code>
+    <code>  &lt;/section&gt;</code>
+    <code>&lt;/main&gt;</code>
+    <code><mark>&lt;footer&gt;</mark>Информация&lt;/footer&gt;</code>
+  </pre>
+  <small class="copyright"><a href="https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks">Success Criterion 2.4.1 Bypass Blocks</a></small>
+</section>
+
+<section class="slide">
+  <table style="font-size: 80%;">
+    <thead>
+    <tr>
+      <th>Плохо 🙅</th>
+      <th>Хорошо 🙂</th>
+      <th>Отлично! 👍</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><code>&lt;div id="header"&gt;</code></td>
+      <td><code>&lt;div role="banner"&gt;</code></td>
+      <td><code>&lt;header&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>&lt;div id="navigation"&gt;</code></td>
+      <td><code>&lt;div role="navigation"&gt;</code></td>
+      <td><code>&lt;nav&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>&lt;div id="main"&gt;</code></td>
+      <td><code>&lt;div role="main"&gt;</code></td>
+      <td><code>&lt;main&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>&lt;div id="section"&gt;</code></td>
+      <td><code>&lt;div role="region"&gt;</code></td>
+      <td><code>&lt;section&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>&lt;div id="sideinfo"&gt;</code></td>
+      <td><code>&lt;div role="complementary"&gt;</code></td>
+      <td><code>&lt;aside&gt;</code></td>
+    </tr>
+
+    <tr>
+      <td><code>&lt;div id="footer"&gt;</code></td>
+      <td><code>&lt;div role="contentinfo"&gt;</code></td>
+      <td><code>&lt;footer&gt;</code></td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="slide">
+  <img src="pictures/landmarks.png" alt="" class="cover">
+</section>
+
+<section class="slide">
+  <h2>Заголовки</h2>
+  <p class="conformance-level operable" title="Управляемость">(Level A), (Level AAA)</p>
+  <pre>
+    <code><mark>&lt;h1&gt;</mark>Фронтенд-программист&lt;/h1&gt;</code>
+    <code>    &lt;section&gt;</code>
+    <code>        <mark>&lt;h2&gt;</mark>Учебная программа&lt;/h2&gt;</code>
+    <code>        &lt;article&gt;</code>
+    <code>            <mark>&lt;h3&gt;</mark>Вёрстка&lt;/h3&gt;</code>
+    <code>        &lt;article&gt;</code>
+    <code>            <mark>&lt;h3&gt;</mark>JavaScript&lt;/h3&gt;</code>
+  </pre>
+  <small class="copyright"
+         style="right: 36px"><a href="https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks">Success Criterion 2.4.1 Bypass Blocks</a></small>
+  <small class="copyright"><a href="https://www.w3.org/TR/WCAG21/#section-headings">Success Criterion 2.4.10 Section Headings</a></small>
+</section>
+
+<section class="slide">
+  <img src="pictures/headings.png" alt="" class="cover">
+</section>
+
+<section class="slide">
+  <img src="pictures/headings-level.png" alt="" class="cover">
+</section>
+
+<section class="slide">
+  <h2 class="cover" style="width: 100%; text-align: center">Доступность с клавиатуры</h2>
+  <small class="copyright"><a href="https://www.w3.org/TR/WCAG21/#keyboard-accessible">Guideline 2.1 Keyboard Accessible</a></small>
+</section>
+
+<section class="slide">
+  <div style="max-width: 320px; margin: 0 auto 7rem;">
+    <div class="columns two" style="margin-bottom: 2rem; justify-items: center">
+      <div>
+        <button class="btn btn-primary btn-primary--blue">
+          <span>Кнопка</span>
+        </button>
+      </div>
+      <div>
+        <a href="#" class="btn btn-primary btn-primary--blue next">Ссылка</a>
+      </div>
+    </div>
+    <div class="columns two">
+      <button class="btn btn-tertiary next">Кнопка</button>
+      <a class="btn btn-tertiary next" href="#">Ссылка</a>
+    </div>
+  </div>
+
+  <div class="next">
+    <p>Если <i>действие</i> – <code>&lt;button&gt;</code></p>
+    <p>Если <i>переход</i> – <code>&lt;a href=""&gt;</code></p>
+  </div>
+</section>
+
+<section class="slide">
+  <h2 class="shout">Самое главное, что посмотреть</h2>
+</section>
+
+<section class="slide slide--full">
+  <iframe width="560"
+          height="315"
+          src="https://www.youtube.com/embed/ssJsjGZE2sc?start=1576"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+</section>
+
+<section class="slide">
+  <h2>Фокус</h2>
+  <p class="conformance-level operable" title="Управляемость">(Level AA)</p>
+  <video class="video" width="760" controls autoplay>
+    <source src="pictures/focus.mov" type="video/mp4">
+  </video>
+  <small class="copyright"><a href="https://www.w3.org/TR/WCAG21/#focus-visible">Success Criterion 2.4.7 Focus Visible</a></small>
+</section>
+
+<section class="slide">
+  <h2>Фокус на интерактивном элементе (демо)</h2>
+  <div class="border-preview place">
+    <button class="btn btn-secondary btn-secondary--yellow">
+      <span>Кнопка</span>
+    </button>
+  </div>
+</section>
+
+<section class="slide">
+  <h2 class="next">🛑 Never. Ever.</h2>
+  <pre>
+    <code>:focus {</code>
+    <code>    outline: none;</code>
+    <code>}</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2>"Дизайнерский" фокус</h2>
+  <pre>
+    <code>:focus {</code>
+    <code>  outline: none;</code>
+    <code>  <mark>box-shadow: 0 0 0 2px #fff,</mark></code>
+    <code>              <mark>0 0 0 4px var(--c-electric-blue-master);</mark></code>
+    <code>}</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2>"Дизайнерский" фокус (демо)</h2>
+  <div class="place">
+    <div class="border-preview is-bgc-sand-yellow">
+      <button class="btn btn-secondary btn-secondary--yellow focus">
+        <span>Кнопка</span>
+      </button>
+    </div>
+    <div class="border-preview is-bgc-electric-blue">
+      <button class="btn btn-secondary btn-secondary--blue focus">
+        <span>Ещё кнопка</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Фокус только с клавиатуры</h2>
+  <pre>
+    <code><mark>:focus-visible</mark> {</code>
+    <code>  box-shadow: 0 0 0 2px #fff,</code>
+    <code>              0 0 0 4px var(--c-electric-blue-master);</code>
+    <code>}</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2>Фокус только с клавиатуры (демо)</h2>
+  <div class="place">
+    <div class="border-preview is-bgc-sand-yellow">
+      <button class="btn btn-secondary btn-secondary--yellow focus">
+        <span>Обычный фокус</span>
+      </button>
+
+      <button class="btn btn-secondary btn-secondary--yellow focus-visible">
+        <span>Волшебный фокус</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Поддержка :focus-visible</h2>
+  <img class="full-width" src="pictures/focus-visible-caniuse.png" alt="">
+  <small class="copyright"><a href="https://github.com/WICG/focus-visible">Полифилл :focus-visible</a></small>
+</section>
+
+<section class="slide">
+  <h2>Порядок фокуса</h2>
+  <p class="conformance-level operable" title="Управляемость">(Level A)</p>
+  <ul>
+    <li>Переход между элементами должен быть логичен</li>
+    <li class="next"><code>tabindex</code> управляет фокусом.</li>
+    <li class="next"><code>tabindex="0"</code> добавляет в порядок.</li>
+    <li class="next"><code>tabindex="-1"</code> делает интерактивным.</li>
+    <li class="next"><code>tabindex</code> &gt; <code>0</code> избегать использования.</li>
+  </ul>
+  <small class="copyright"><a href="https://www.w3.org/TR/WCAG21/#focus-order">Success Criterion 2.4.3 Focus Order</a></small>
+</section>
+
+<section class="slide">
+  <h2 style="font-size: 80%;">Порядок фокуса инструменты разработчика в FF</h2>
+  <img src="pictures/tabindex-order.png" alt="" width="80%" style="margin: 0 auto">
+</section>
+
+<section class="slide">
+  <h2 class="cover">Перейти к контенту</h2>
+</section>
+
+<section class="slide">
+  <h2>Skip Link</h2>
+  <p class="conformance-level operable" title="Управляемость">(Level A)</p>
+  <img src="pictures/skip-link-NYT.png" alt="">
+  <small class="copyright"><a href="https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks">Success Criterion 2.4.1 Bypass Blocks</a></small>
+</section>
+
+<section class="slide">
+  <h2>Skip Link реализация</h2>
+  <div class="columns two" style="font-size: 80%;">
+  <pre>
+    <code>&lt;a class="<mark>skip-link"</mark></code>
+    <code>   <mark>href="#main"</mark>&gt;</code>
+    <code>  Перейти к основному контенту</code>
+    <code>&lt;/a&gt;</code>
+    <code>&lt;main id="main"&gt;...&lt;/main&gt;</code>
+  </pre>
+    <pre>
+    <code>.skip-link {</code>
+    <code>  transform: translateY(-200px);</code>
+    <code>  transition: transform 0.2s;</code>
+    <code>}</code>
+    <code><mark>.skip-link:focus</mark> {</code>
+    <code>  transform: translateY(0%);</code>
+    <code>}</code>
+  </pre>
+  </div>
+</section>
+
+<section class="slide">
+  <h2 class="cover">Масштабирование</h2>
+</section>
+
+<section class="slide">
+  <h2 class="">Масштабирование</h2>
+  <ul>
+    <li>Обеспечить увеличение интерфейса до 200% с помощью комбинаций клавиш «Cmd +» или «Ctrl +»</li>
+    <li class="next">Отзывчивая и адаптивная вёрстка</li>
+    <li class="next">Относительные величины: <code>%</code>, <code>em</code>, <code>rem</code></li>
+    <li class="next">⚠️ Любая отдельная версия - это всегда <i>ресурсы
+      <b>x2</b></i> на реализацию и ещё больше на поддержку
+    </li>
+  </ul>
+  <p class="conformance-level perceivable" title="Воспринимаемость">(Level AA)</p>
+  <small class="copyright"><a href="https://www.w3.org/TR/WCAG21/#resize-text">Success Criterion 1.4.4 Resize text</a></small>
+</section>
+
+<section class="slide">
+  <h2>🛑 Плохая практика</h2>
+  <pre>
+    <code>html,</code>
+    <code>body {</code>
+    <code>    font-size: 16px;</code>
+    <code>}</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2>Размер шрифта адаптируется</h2>
+  <pre>
+    <code>body {</code>
+    <code>    font-size: <mark>1rem;</mark></code>
+    <code>}</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2 class="cover">Подписи элементов</h2>
+</section>
+
+<section class="slide">
+  <p>Любой элемент интерфейса, визуально доступный и представляющий собой ценность для пользователя, должен быть подписан.</p>
+  <ul style="font-size: 80%;">
+    <li><code>&lt;label&gt;</code> для элементов форм</li>
+    <li class="next"><code>aria-label</code> или <code>aria-labelledby</code>, если
+      <code>&lt;label&gt;</code> не подходит
+    </li>
+    <li class="next"><code>alt</code> аттрибут для <code>&lt;img&gt;</code></li>
+    <li class="next">Если элемент не представляет ценности для пользователя скринридера, его "видимость" для пользователя нужно отключить.
+      <code>alt=""</code> для декоративных картинок или атрибуты <code>role="presentation"</code> и
+      <code>aria-hidden="true"</code>.
+    </li>
+  </ul>
+  <small class="copyright"><a href="https://www.w3.org/TR/WCAG21/#non-text-content">Success Criterion 1.1.1 Non-text Content</a></small>
+</section>
+
+<section class="slide">
+  <h2>Кнопка-иконка пример</h2>
+  <img src="pictures/modal-close.png" alt="" width="60%" style="margin: 0 auto;">
+
+</section>
+
+<section class="slide">
+  <h2>🛑 Кнопка-иконка плохая реализация</h2>
+  <pre>
+    <code>&lt;i class="btn-close"&gt;</code>
+    <code>  &lt;svg&gt;...&lt;/svg&gt;</code>
+    <code>&lt;/i&gt;</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2>Кнопка-иконка неплохая реализация</h2>
+  <div class="columns two">
+    <pre style="font-size: 80%; margin-right: 3em;">
+      <code>&lt;button class="btn-close"</code>
+      <code>        type="button"&gt;</code>
+      <code>  &lt;svg&gt;...&lt;/svg&gt;</code>
+      <code>  <mark>&lt;span class="visually-hidden"&gt;</mark></code>
+      <code>    <mark>Закрыть модальное окно входа</mark></code>
+      <code>  <mark>&lt;/span&gt;</mark></code>
+      <code>&lt;/button&gt;</code>
+    </pre>
+    <pre style="font-size: 80%;">
+    <code>.visually-hidden {</code>
+      <code>  position: absolute;</code>
+      <code>  width: 1px;</code>
+      <code>  height: 1px;</code>
+      <code>  overflow: hidden;</code>
+      <code>  white-space: nowrap;</code>
+      <code>  clip: rect(0 0 0 0);</code>
+      <code>}</code>
+    </pre>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Кнопка-иконка неплохая реализация 2</h2>
+  <div class="columns two">
+    <pre style="font-size: 80%; margin-right: 3em;">
+      <code>&lt;button class="btn-close"</code>
+      <code>        type="button"</code>
+      <code>        <mark>aria-label="Закрыть модальное окно входа"</mark>&gt;</code>
+      <code>  &lt;svg&gt;...&lt;/svg&gt;</code>
+      <code>&lt;/button&gt;</code>
+    </pre>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Кнопка-иконка хорошая реализация</h2>
+  <pre style="font-size: 80%;">
+    <code><mark>&lt;span class="visually-hidden"</mark></code>
+    <code>      <mark>aria-hidden="true" id="buttonLabelId"&gt;</mark></code>
+    <code>  <mark>Закрыть модальное окно входа</mark></code>
+    <code><mark>&lt;/span&gt;</mark></code>
+    <code>&lt;button class="btn-close"</code>
+    <code>        type="button"</code>
+    <code>        <mark>aria-labelledby="buttonLabelId"&gt;</mark></code>
+    <code>  &lt;svg&gt;...&lt;/svg&gt;</code>
+    <code>&lt;/button&gt;</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2>Назначение ссылки</h2>
+  <p class="conformance-level operable" title="Управляемость">(Level A)</p>
+  <p>Назначение каждой ссылки можно определить по тексту ссылки.</p>
+  <div class="columns two">
+    <img src="pictures/bad-link.png" alt="" class="next">
+    <img src="pictures/good-link.png" alt="" class="next">
+  </div>
+  <small class="copyright"><a href="https://www.w3.org/TR/WCAG21/#link-purpose-in-context">Success Criterion 2.4.4 Link Purpose (In Context)</a></small>
+</section>
+
+<section class="slide">
+  <h2>Создать привычку</h2>
+  <img src="pictures/slack-bad-links.png" alt="" width="80%" style="margin-bottom: 1em;">
+  <img src="pictures/slack-good-links.png" alt="" width="80%" class="next">
+</section>
+
+<section class="slide">
+  <h2 class="cover">Использование цвета</h2>
+</section>
+
+<section class="slide">
+  <h2>Цвет + графика <br><br></h2>
+  <p class="conformance-level perceivable" title="Воспринимаемость">(Level A)</p>
+  <img src="pictures/colorblind-ui.png" alt="">
+  <small class="copyright"><a href="https://www.w3.org/TR/WCAG21/#use-of-color">Success Criterion 1.4.1 Use of Color</a></small>
+</section>
+
+<section class="slide">
+  <h2>Цвет + графика<br>(протанопия)</h2>
+  <p class="conformance-level perceivable" title="Воспринимаемость">(Level A)</p>
+  <img src="pictures/colorblind-ui-2.png" alt="">
+  <small class="copyright"><a href="https://www.w3.org/TR/WCAG21/#use-of-color">Success Criterion 1.4.1 Use of Color</a></small>
+</section>
+
+<section class="slide">
+  <h2>Контраст</h2>
+  <ul>
+    <li>Минимальный коэффициент контрастности <b>4.5:1</b></li>
+    <li class="next">Для большого текста (18pt, 14pt bold) - <b>3:1</b></li>
+    <li class="next">Исключения: декоративные элементы, неактивные контролы</li>
+  </ul>
+  <small class="copyright"><a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">Success Criterion 1.4.3 Contrast (Minimum)</a></small>
+</section>
+
+<section class="slide">
+  <h2>Контраст (Chrome DevTools)</h2>
+  <img src="pictures/bad-contrast.png" alt="">
+</section>
+
+<section class="slide">
+  <h2>Достаточный контраст</h2>
+  <img src="pictures/good-contrast.png" alt="">
+</section>
+
+
+<section class="slide">
+  <h2>Target size</h2>
+  <p class="conformance-level operable" title="Управляемость">(Level AAA)</p>
+  <div class="columns two">
+    <p>✅ Согласно WCAG 2.1 достаточно 44x44px</p>
+    <figure>
+      <figcaption>Material Design</figcaption>
+      <img src="pictures/target-size-icon.png" alt="" width="">
+
+    </figure>
+  </div>
+  <small class="copyright"><a href="https://www.w3.org/TR/WCAG21/#target-size">Success Criterion 2.5.5 Target Size</a></small>
+</section>
+
+<section class="slide">
+  <h2>Target size плохой пример</h2>
+  <img src="pictures/target-size-bad.png" alt="">
+</section>
+
+<section class="slide">
+  <h2>Target size реализация 1</h2>
+  <code>padding: 1em;</code>
+  <img src="pictures/target-size-good.png" alt="">
+</section>
+
+<section class="slide">
+  <h2>Target size реализация 2</h2>
+  <div class="columns two">
+  <pre style="font-size: 70%;">
+    <code>.btn-icon {</code>
+    <code>  position: relative;</code>
+    <code>}</code>
+    <code>.btn-icon::before {</code>
+    <code>  position: absolute;</code>
+    <code>  top: -0.5em;</code>
+    <code>  right: -0.5em;</code>
+    <code>  bottom: -0.5em;</code>
+    <code>  left: -0.5em;</code>
+    <code>  content: '';</code>
+    <code>}</code>
+  </pre>
+    <img src="pictures/social-target-size.png" alt="">
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Target size ещё примеры</h2>
+  <div class="columns two">
+    <div style="display: flex; gap: 1em;">
+      <img src="pictures/target-size-links-bad.png" alt="" width="50%">
+      <img src="pictures/target-size-links-good.png" alt="" width="50%">
+    </div>
+    <img src="pictures/target-size-radio-buttons.png" alt="">
+  </div>
+</section>
+<!--------------------------------------------------------------------->
+
+
+<section class="slide">
+  <h2 class="shout">Инструменты и ресурсы</h2>
+</section>
+
+<section class="slide">
+  <h2>Инструменты</h2>
+  <ul>
+    <li><a href="https://validator.w3.org/">The W3C Markup Validation Service</a></li>
+    <li><a href="https://developers.google.com/web/tools/lighthouse">Google Lighthouse</a></li>
+    <li>Скринридеры: VoiceOver, NWDA, JAWS, TalkBack</li>
+    <li>Accessibility Tree в Chrome/FF</li>
+    <li>Эммуляторы различных типов зрения в Chrome/FF</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Ресурсы</h2>
+  <ul>
+    <li><a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 - стандарт</a></li>
+    <li><a href="https://www.w3.org/TR/wai-aria/">WAI-ARIA 1.1 - спецификация</a></li>
+    <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/">WAI-ARIA Authoring Practices 1.1</a></li>
+    <li><a href="https://inclusive-components.design/">Inclusive Components by Heydon Pickering</a></li>
+    <li>
+      <a href="https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components/">A Complete Guide To Accessible Front-End Components</a>
+    </li>
+    <li>
+      <a href="https://t.me/neiskluchenie">Телеграм-канал "Не исключение: цифровая доступность и инклюзивный дизайн"</a>
+    </li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2 class="">Не существует среднего или нормального пользователя.<br></br>Есть <i>разные</i> сценарии взаимодействия.
+  </h2>
+</section>
+
+<section class="slide" hidden>
+  <h2 class="cover"><b>НЕ</b> просто вёрстка</h2>
+</section>
+
+<section class="slide">
+  <figure>
+    <img src="pictures/1_ZRPVYvPyAb4tJ-Tx5El-Bw.jpeg" alt="Picture placeholder." style="max-width: 70%; margin: 0 auto">
+    <figcaption style="margin-top: 1em; font-size: 0.5em; text-align: center;">Ножи компании OXO сделаны для экстремальных пользователей,<br>но удобны для среднего пользователя
+    </figcaption>
+    <small class="copyright"><a href="https://medium.com/@Valeria.kurmak/%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0-%D1%83%D1%87%D0%B8%D1%82%D1%8B%D0%B2%D0%B0%D1%8E%D1%82-%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D1%82%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE-%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D0%B5%D0%B3%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F-4cac285a52e2#">Когда учитывают потребности только среднего пользователя</a>.</small>
+  </figure>
+</section>
+
+<section class="slide">
+  <blockquote>
+    <p>Невозможно стать самой крутой дизайн компанией, как например
+      <b>OXO</b>, думая только о среднем пользователе.<br>Только тогда, когда ваш нож одинаково крут и для человека с артритом, и для шеф-повара, вы завоюете весь рынок.<br>Только тогда, когда вашим устройством одинаково желает пользоваться и зрячий, и незрячий, вы – компания
+      <b>Apple</b>.</p>
+  </blockquote>
+  <p><i>— Валерия Курмак</i></p>
+  <small class="copyright"><a href="https://medium.com/@Valeria.kurmak/%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0-%D1%83%D1%87%D0%B8%D1%82%D1%8B%D0%B2%D0%B0%D1%8E%D1%82-%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D1%82%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE-%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D0%B5%D0%B3%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F-4cac285a52e2#">Когда учитывают потребности только среднего пользователя</a>.</small>
+</section>
+
+<section class="slide">
+  <blockquote>
+    <p>Сила Интернета заключается в его универсальности.
+      Всеобщая доступность, невзирая на ограничения здоровья, является непременным его условием.</p>
+    <p><i>– Tim Berners-Lee, директор W3C и создатель Всемирной паутины</i></p>
+  </blockquote>
+</section>
+
+
+<section class="slide">
+  <img src="pictures/not-being-disabled-is-temporary.jpeg" alt="" style="max-height: 400px; margin: 0 auto;">
+  <small class="copyright"><a href="https://twitter.com/charis/status/1179658993649750016">Char💉s on Twitter: "“Not being disabled is temporary“... / Twitter</a>.</small>
+</section>
+
+<section class="slide">
+  <h2 class="cover">Спасибо!<br>Вопросы?</h2>
+</section>
+
+<div class="progress"></div>
+
+<script src="node_modules/@shower/core/dist/shower.js"></script>
 
 </body>
 </html>
